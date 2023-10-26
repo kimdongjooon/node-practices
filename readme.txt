@@ -5,6 +5,12 @@ Node Practices
     2) 프로젝트 이동: cd project-ex01 
     3) 프로젝트 초기화: 프로젝트 메니페스트 파일 (package.json)을 새성.
         [project-ex01]$ npm init -y
+        [project-ex01]$ npm test 
+    4) Github 올라가는 파일
+        - src
+        - package.json (src파일에서 사용하는 패키지를 여기서 찾음.)
+        - package-lock.json
+        - node-modules는 안올려도됨.
 2. 패키지
     - 완전한 어플리케이션(babel, webpack, nodemon, Lint, ...)
     - 프로잭트에서 사용하는 라이브러리 모듈(module)
@@ -16,6 +22,19 @@ Node Practices
     - 전역설치
     - 지역설치
     - 패키지 설치
-        $ npm i ejs [지역, 일반]
-6. node 프로젝트 만들기.
-7. 서버 프로그래밍 잠깐 맛보기.
+        $ npm i ejs         [지역, 일반]
+        $ npm i -D nodemon  [지역, 개발]
+        $ npm i -g gulp     [전역, 일반]
+        $ npx gulp --version : 버전확인.
+    - 패키지 삭제
+        $ npm un ejs        [지역]
+        $ npm un nodemon    [지역]
+        $ npm un -g gulp    [전역]
+
+5. module 
+    1) 코어 모듈: node에서 제공하는 모듈(fs, os, process, http, ...) : 예시 app01/ app02 파일.
+    2) npm 모듈: npm을 통해서 node_modules애 설치하고 사용하는 모듈 
+    3) 파일 모듈: 파일 경로로 불러온 모듈안에 함수나 객체를 사용한다.
+    
+6. 서버 프로그래밍 잠깐 맛보기.
+    1) npm run dev 으로 실행.
